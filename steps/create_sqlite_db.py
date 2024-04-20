@@ -21,24 +21,23 @@ def create_db_from_csvs(input_filenames:List[str], output_filename:str) -> None:
 
 
 def create_sqlite_db(**kwargs) -> None:
+    tables = kwargs['tables']
+    output_folder = kwargs['output_folder']
 
     version = '1.0.0'
-    output_folder = f"versions/{version}"
+    version_folder = f"{output_folder}/versions/{version}"
 
-    if not os.path.exists(output_folder):
-        os.makedirs(output_folder)
+    if not os.path.exists(version_folder):
+        os.makedirs(version_folder)
 
-    tables = ['motifs','alleles','relationships','structures']
     input_filenames = []
     for table in tables:
         input_filenames.append(f"tmp/{table}.csv")
 
-    output_filename = "versions/1.0.0/histo.db"        
+    output_filename = f"{version_folder}/histo.db"        
 
-
-    
     create_db_from_csvs(input_filenames, output_filename)
 
 
 if __name__ == "__main__":
-    create_sqlite_db()
+    create_sqlite_db()  

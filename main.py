@@ -7,15 +7,16 @@ def main():
     print('Hello from the database pipeline!\n')
 
     tables = ['motifs','alleles','relationships','structures']
+    output_folder = '/output'
 
     print ('Loading latest data\n')
     load_latest_data(tables=tables)
 
     print ('\nCreating SQLite database\n')
-    create_sqlite_db(tables=tables)
+    create_sqlite_db(tables=tables, output_folder=output_folder)
 
     print ('Listing files in versions/1.0.0\n')
-    ls_command = 'ls -l versions/1.0.0/*'
+    ls_command = f"ls -l {output_folder}/versions/1.0.0/*"
 
     os.system(ls_command)
 
