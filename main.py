@@ -1,10 +1,18 @@
 import os
+import toml
 
 from steps.create_sqlite_db import create_sqlite_db
 from steps.load_latest_data import load_latest_data
 
 def main():
     print('Hello from the database pipeline!\n')
+
+    try:
+        with open('/config/config.toml') as f:
+            config = toml.load(f)
+            print (config)
+    except:
+        print ('Error reading config file\n')
 
     tables = ['motifs','alleles','relationships','structures']
     output_folder = '/outputs'
