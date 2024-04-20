@@ -7,9 +7,11 @@ from steps.load_latest_data import load_latest_data
 def main():
     print('Hello from the database pipeline!\n')
 
+    print ('Reading config file\n')
     try:
         with open('/config/config.toml') as f:
             config = toml.load(f)
+            print ('Config file read successfully\n')
             print (config)
     except:
         print ('Error reading config file\n')
