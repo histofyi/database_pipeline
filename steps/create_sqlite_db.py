@@ -25,7 +25,11 @@ def create_sqlite_db(**kwargs) -> None:
     output_folder = kwargs['output_folder']
 
     version = '1.0.0'
-    version_folder = f"{output_folder}/versions/{version}"
+    versions_folder = f"{output_folder}/versions"
+    version_folder = f"{versions_folder}/{version}"
+
+    if not os.path.exists(versions_folder):
+        os.makedirs(versions_folder)
 
     if not os.path.exists(version_folder):
         os.makedirs(version_folder)

@@ -15,7 +15,6 @@ WORKDIR /app
 COPY . /app
 
 RUN mkdir tmp
-RUN mkdir versions
 
 
 # Creates a non-root user with an explicit UID and adds permission to access the /app folder
