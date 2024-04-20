@@ -165,3 +165,6 @@ tmp/
 
 # Database versions
 versions/
+
+# VS Code
+.vscode/
