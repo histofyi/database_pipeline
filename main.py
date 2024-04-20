@@ -7,7 +7,7 @@ def main():
     print('Hello from the database pipeline!\n')
 
     tables = ['motifs','alleles','relationships','structures']
-    output_folder = '/output'
+    output_folder = '/outputs'
 
     print ('Loading latest data\n')
     load_latest_data(tables=tables)
