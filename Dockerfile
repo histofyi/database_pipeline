@@ -17,10 +17,6 @@ COPY . /app
 RUN mkdir tmp
 RUN mkdir versions
 
-RUN curl -o tmp/alleles.csv https://raw.githubusercontent.com/histofyi/datatables/main/csv/alleles.csv
-RUN curl -o tmp/motifs.csv https://raw.githubusercontent.com/histofyi/datatables/main/csv/motifs.csv
-RUN curl -o tmp/relationships.csv https://raw.githubusercontent.com/histofyi/datatables/main/csv/relationships.csv
-RUN curl -o tmp/structures.csv https://raw.githubusercontent.com/histofyi/datatables/main/csv/structures.csv
 
 # Creates a non-root user with an explicit UID and adds permission to access the /app folder
 # For more info, please refer to https://aka.ms/vscode-docker-python-configure-containers

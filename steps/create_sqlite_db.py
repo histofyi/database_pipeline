@@ -38,9 +38,6 @@ def create_sqlite_db(**kwargs) -> None:
 
     
     create_db_from_csvs(input_filenames, output_filename)
-    print(f"Created sqlite db at {output_filename}")
-
-
 
 
 if __name__ == "__main__":
