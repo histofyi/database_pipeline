@@ -1,2 +1,2 @@
-MODE = "google_clout"
+MODE = "google_cloud"
 OUTPUT_PATH = "/output"
