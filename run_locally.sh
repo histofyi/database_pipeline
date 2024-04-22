@@ -1,5 +1,5 @@
-export environment=local
-echo $environment
+export ENVIRONMENT=local
+echo $ENVIRONMENT
 
 mkdir tmp
 mkdir outputs
