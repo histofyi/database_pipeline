@@ -54,6 +54,7 @@ def get_previous_version(output_folder:str, config:Dict) -> Union[Dict, str]:
             current_table_hashes = current_version_info['table_hashes']
             current_version = current_version_info['version']
     except:
+        print ('No current_version.json file found, starting from scratch...')
         current_table_hashes = {}
         current_version = config['INITIAL_VERSION']
 
@@ -94,6 +95,7 @@ def generate_version_number(current_version_number:str, table_version:bool, data
         new_version = None
     return new_version
 
+
 def run_pipeline():
     print('Hello from the database pipeline!\n')
 
@@ -128,6 +130,9 @@ def run_pipeline():
 
             new_version_info = {'version': new_version_number, 'table_hashes': new_table_hashes, 'created_at': datetime.now().isoformat()}
             print (new_version_info)
+
+            print (f"Writing new version information to {output_folder}/current_version.json\n")
+
             with open(f"{output_folder}/current_version.json", 'w') as f:
                 json.dump(new_version_info, f)
 
