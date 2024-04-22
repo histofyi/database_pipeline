@@ -23,8 +23,8 @@ def create_db_from_csvs(input_filenames:List[str], output_filename:str) -> None:
 def create_sqlite_db(**kwargs) -> None:
     tables = kwargs['tables']
     output_folder = kwargs['output_folder']
-
-    version = '1.0.0'
+    version = kwargs['version']
+    
     versions_folder = f"{output_folder}/versions"
     version_folder = f"{versions_folder}/{version}"
 
