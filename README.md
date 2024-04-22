@@ -6,18 +6,18 @@ Currently working
 - loading tables from GitHub
 - creating a database
 - writing the database to the GC bucket
+- using secrets/configuration provided in environment variables
+- write current version number to file in output folder
+- write a file with the hash of the different csv files to compare versions
+- only update the version and the GC bucket file if the hashes have changed
 
 Not yet working
-
-- loading config from GC bucket
-- using config from GC bucket
-- using secrets provided in environment variables
+- write a log to GC log bucket
 
 Backlog
 
-- update dataset
+- update datasette on Vercel
 - update Zenodo
-- write next version number to file in config folder
-- write a file with the hash of the different csv files to compare versions
-- only update the version and the GC bucket file if the hashes have changed
-- write a log to GC log bucket
+- adding a versions table with information on included data and when it was last updated
+
+
