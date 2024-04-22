@@ -1,2 +1,2 @@
-MODE = "google_cloud"
-OUTPUT_PATH = "/output"
+TABLES = ['motifs','alleles','relationships','structures']
+INITIAL_VERSION = '1.0.0'

@@ -1,0 +1,3 @@
+OUTPUT_PATH = "outputs"
+LOG_PATH = "logs"
+TMP_PATH = "tmp"
