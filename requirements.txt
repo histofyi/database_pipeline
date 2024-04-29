@@ -2,3 +2,4 @@ csvs-to-sqlite==1.3
 pandas==1.4.0
 requests
 toml
+datasette-publish-vercel
