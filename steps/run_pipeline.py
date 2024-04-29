@@ -79,9 +79,9 @@ def check_tables_for_changes(current_table_hashes:Dict, new_table_hashes:Dict, t
                 data_version = False
             break
 
-    new_verion_number = generate_version_number(current_version_number, table_version, data_version)
+    new_version_number = generate_version_number(current_version_number, table_version, data_version)
 
-    return changed_data, new_verion_number
+    return changed_data, new_version_number
 
 
 def generate_version_number(current_version_number:str, table_version:bool, data_version:bool) -> str:
@@ -102,7 +102,7 @@ def run_pipeline():
     config = load_config(os.environ.get('ENVIRONMENT', 'local'))
 
     output_folder = config['paths']['OUTPUT_PATH']
-    tables = ['motifs','alleles','relationships','structures']
+    tables = config['TABLES']
 
     if config:
         
