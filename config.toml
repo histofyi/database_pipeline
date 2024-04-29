@@ -1,2 +1,2 @@
-TABLES = ['motifs','alleles','relationships','structures']
-INITIAL_VERSION = '1.0.0'
+TABLES = ['motifs','alleles','relationships']
+INITIAL_VERSION = '0.0.1'
