@@ -1,0 +1,1 @@
+gcloud beta run jobs update database-pipeline-test --add-volume name=histofyi_databases,type=cloud-storage,bucket=histofyi_databases --add-volume-mount volume=histofyi_databases,mount-path=/config
